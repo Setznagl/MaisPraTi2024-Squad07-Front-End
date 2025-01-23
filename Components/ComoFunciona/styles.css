@@ -1,0 +1,111 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8f8f8;
+    color: #000000;
+  }
+  
+  
+  .how-it-works {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .how-it-works h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 650;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    
+  }
+  
+  .how-it-works .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .icon-wrapper {
+    width: 100px; /* Certifique-se de que o tamanho combina com o círculo */
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    position: relative; /* Necessário para o círculo giratório */
+  }
+  
+  .icon-wrapper .circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    animation: rotate 3s linear infinite;
+  }
+  
+  .icon-wrapper.blue .circle {
+    border-color: rgba(19, 115, 133);
+  }
+  
+  .icon-wrapper.black .circle {
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon-wrapper.orange .circle {
+    border-color: rgba(247, 166, 13, 0.5);
+  }
+  
+  .icon-wrapper img {
+    width: 89px; /* Ajuste as dimensões conforme necessário */
+    height: 89px;
+    border-radius: 50%; /* Faz com que a imagem fique circular */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    position: relative; /* Garante que a imagem esteja dentro do wrapper */
+    z-index: 2; /* Garante que fique acima do círculo giratório */
+    left: 1px;
+  }
+  
+  
+  .step h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Animação */
+  @keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  
