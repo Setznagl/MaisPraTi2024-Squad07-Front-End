@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('/src/assets/fonts/Outfit/static/Outfit-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url('/src/assets/fonts/Outfit/static/Outfit-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+.role-card {
+  font-family: 'Outfit', sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  max-width: 90%;
+  width: 100%;
+}
+
+.role-card.light {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.role-card.dark {
+  background-color: #21201E;
+  background-image:
+    url('../../assets/images/carImage.png'),
+    url('../../assets/images/listracanto.svg'),
+    url('../../assets/images/listrasubcanto.svg');
+  background-repeat: no-repeat;
+  background-position:
+    90% bottom,  /* Carro */
+    110% bottom, /* Listra Subcanto */
+    110% bottom; /* Listra Canto */
+  background-size: 500px, 450px, 600px;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.role-card-content h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1.5rem;
+}
+
+.role-card-content ul {
+  margin-top: 3rem;
+  text-align: start;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.role-card-content ul li {
+  display: flex;
+  padding: 0.4%;
+  align-items: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  margin-bottom: 10px;
+  margin: 0 10%;
+}
+
+.role-card-content ul li span {
+  margin-right: 0.5rem;
+}
+
+.role-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.role-button.light-btn {
+  font-family: 'Outfit-Regular', sans-serif;
+  background-color: #21201E;
+  color: #fff;
+}
+
+.role-button.dark-btn {
+  font-family: 'Outfit-Regular', sans-serif;
+  background-color: #fff;
+  color: #21201E;
+}
+
+.disclaimer {
+  font-family: 'Outfit-Regular', sans-serif;
+  color: #858585;
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  width: 60%; /* Define uma largura menor */
+  max-width: 450px; /* Evita que fique muito largo */
+  line-height: 1.4; /* Melhora a leitura */
+  white-space: normal; /* Permite quebra de linha */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .role-card {
+    padding: 2rem;
+  }
+
+  .role-card-content ul {
+    margin-top: 2rem;
+  }
+
+  .role-card-content ul li {
+    margin: 0 3%;
+  }
+
+  .role-card.dark {
+    background-image:
+    url('../../assets/images/carImage.png'),
+    url('../../assets/images/listracanto.svg');
+    background-position:
+      100% bottom,
+      100% bottom;
+    background-size: 400px, 400px;
+    background-attachment: fixed;
+  }
+
+  .disclaimer {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .role-card {
+    padding: 1.5rem;
+  }
+
+  .role-card-content h2 {
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  }
+
+  .role-card-content ul li {
+    margin: 0 2%;
+  }
+
+  .role-card.dark {
+    background-image:
+    url('../../assets/images/listracanto.svg');
+    background-position:
+      100% bottom;
+    background-size: 400px;
+    background-attachment: fixed;
+  }
+
+  .disclaimer {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-card {
+    padding: 1rem;
+  }
+
+  .role-card-content ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-card-content ul li span {
+    margin-bottom: 0.5rem;
+  }
+
+  .role-card.dark {
+    background-image: none; /* Remove imagens para melhorar performance */
+  }
+}

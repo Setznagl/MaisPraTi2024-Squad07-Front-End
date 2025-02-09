@@ -1,0 +1,34 @@
+.body {
+  text-align: center;
+  background-color: #1a1a1a;
+  background-image:
+    url('../../assets/images/listralarga.svg'),
+    url('../../assets/images/listramedia.svg'),
+    url('../../assets/images/listracurta.svg');
+  background-repeat: no-repeat;
+  background-position:
+    110% bottom,
+    /* Primeira listra a direita, ajustada com vw para maior flexibilidade */
+    95% bottom,
+    /* Segunda listra a direita */
+    0% bottom;
+  /* Terceira listra no canto esquerdo inferior */
+  background-size: auto;
+  color: white;
+  padding: 50px 20px;
+}
+
+.roles-page {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.role-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
