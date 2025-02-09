@@ -1,0 +1,91 @@
+section {
+  width: 396px;
+  height: 541px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.content {
+  padding: 36px 27px;
+  position: relative;
+}
+
+.image-content {
+  width: 100%; 
+  border-radius: 8px;
+}
+
+.user-content {
+  position: absolute;
+  right: 46px; 
+  top: 48%; 
+  transform: translateY(-50%); 
+  border-radius: 50%; 
+}
+
+.button-actions-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.button-action:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.button-action:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+button {
+  height: 47px;
+}
+
+button:hover {
+  border: none;
+}
+
+.info-content {
+  margin-block: 20px 30px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.car-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.car-item {
+  display: flex;
+  gap: 10px;
+  color: #828282;
+}
+
+.car-item p {
+  margin-bottom: 0;
+}
